@@ -248,14 +248,20 @@
 
 <script>
   const reveals = document.querySelectorAll(".reveal");
-  window.addEventListener("scroll", () => {
+
+  function revealOnLoadAndScroll() {
     reveals.forEach(el => {
       if (el.getBoundingClientRect().top < window.innerHeight - 80) {
         el.classList.add("active");
       }
     });
-  });
+  }
+
+  window.addEventListener("scroll", revealOnLoadAndScroll);
+  window.addEventListener("load", revealOnLoadAndScroll);
 </script>
+
 
 </body>
 </html>
+
