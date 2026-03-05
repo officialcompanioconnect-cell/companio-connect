@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Companio | Structured Time. Real Connections.</title>
+  <style>
+    /* Critical styles to prevent FOUC */
+    body {
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+  </style>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body onload="document.body.style.opacity='1'">
+
+  <div class="noise-overlay"></div>
+  <div class="ambient-light"></div>
+  <div class="perspective-grid"></div>
+
+  <nav class="navbar">
+    <a href="#" class="logo-container">
+      <!-- Blending logic handled in CSS via mix-blend-mode -->
+      <img src="assets/images/logo.png" alt="Companio Logo">
+    </a>
+
+    <div class="nav-links">
+      <a href="#concept">Manifesto</a>
+      <a href="#how">Process</a>
+      <a href="#features">Features</a>
+      <a href="#team">Team</a>
+    </div>
+
+    <!-- Added theme toggle back since the user's HTML didn't have it explicitly but we want to keep it -->
+    <div style="display: flex; gap: 1rem; align-items: center;">
+      <button id="themeToggle" class="theme-toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode">
+        <span class="toggle-knob"></span>
+      </button>
+      <a href="#join" class="btn-nav">Join Beta</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content reveal-group">
+        <span class="hero-tag">Intentional. Verified. Human.</span>
+        <h1>Structured Time.<br><span class="text-accent">Real Connections.</span></h1>
+        <p style="max-width: 600px; margin: 0 auto 3rem;">
+          The antidote to ghosting and endless swiping. Book specific times to meet verified people. Show up, connect,
+          and respect the clock.
+        </p>
+        <div class="cta-wrapper">
+          <a href="#join" class="btn-xl">Join Early Access</a>
+          <a href="#concept" class="btn-text">Read Manifesto</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding" id="concept">
+      <div class="container reveal-group">
+        <div class="comparison-grid">
+          <div class="glass-card card-problem">
+            <h3>The Current State</h3>
+            <h2 style="font-size: 2rem; margin-top: 0.5rem; color: var(--c-text-main);">Infinite Noise</h2>
+            <ul style="margin-top: 2rem; opacity: 0.7;">
+              <li style="margin-bottom: 1rem;">✕ &nbsp;Endless "Hey" messages</li>
+              <li style="margin-bottom: 1rem;">✕ &nbsp;Ghosting culture</li>
+              <li style="margin-bottom: 1rem;">✕ &nbsp;Zero accountability</li>
+            </ul>
+          </div>
+          <div class="glass-card card-solution">
+            <h3 class="text-accent">The Companio Way</h3>
+            <h2 style="font-size: 2rem; margin-top: 0.5rem;">Time-Boxed Intent</h2>
+            <p style="margin-top: 2rem;">
+              We replaced the "queue" with a calendar. You don't match to chat; you match to book a session.
+              <br><br>
+              When the clock starts, you are present. When it ends, you are free.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding" id="how">
+      <div class="container reveal-group">
+        <h2 style="margin-bottom: 4rem; text-align: center;">How It Works</h2>
+        <div class="process-grid">
+          <div class="process-card">
+            <span class="process-num">01_SETUP</span>
+            <h3>Define Intent</h3>
+            <p style="font-size: 0.95rem;">Set your availability and connection goals. No vague bios.</p>
+          </div>
+          <div class="process-card">
+            <span class="process-num">02_MATCH</span>
+            <h3>Smart Pairing</h3>
+            <p style="font-size: 0.95rem;">Algorithms match you based on mutual time windows and intent.</p>
+          </div>
+          <div class="process-card">
+            <span class="process-num">03_COMMIT</span>
+            <h3>Book Slot</h3>
+            <p style="font-size: 0.95rem;">Confirm a specific time. Both parties stake their reputation on showing up.
+            </p>
+          </div>
+          <div class="process-card">
+            <span class="process-num">04_CONNECT</span>
+            <h3>Be Present</h3>
+            <p style="font-size: 0.95rem;">Engage fully for the duration. No distractions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding" id="features">
+      <div class="container reveal-group">
+        <h2 style="margin-bottom: 3rem; text-align: center;">Engineered for Humans</h2>
+        <div class="bento-grid">
+          <div class="glass-card bento-item bento-tall">
+            <div
+              style="height: 100px; width: 100px; background: var(--c-accent); filter: blur(60px); position: absolute; top: -20px; left: -20px; opacity: 0.6;">
+            </div>
+            <h3 class="bento-title">Radical<br>Presence</h3>
+            <p>By putting a hard stop on interactions (e.g., 45 mins), we create a safe container where people feel
+              comfortable opening up quickly.</p>
+          </div>
+          <div class="glass-card bento-item bento-wide">
+            <h3 class="bento-title">Identity Verification</h3>
+            <p>No bots. No catfish. Every member is verified via ID and social graph checks before they can book a
+              single minute of your time.</p>
+          </div>
+          <div class="glass-card bento-item">
+            <h3 class="bento-title">No Chat Limbo</h3>
+            <p>Texting is strictly for logistics. Connection happens live.</p>
+          </div>
+          <div class="glass-card bento-item">
+            <h3 class="bento-title">Reliability Score</h3>
+            <p>Flaking affects your score. High reliability unlocks premium circles.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="philosophy-strip">
+      <div class="scrolling-text">
+        Intentionality • Respect • Boundaries • Presence • Safety • Intentionality • Respect • Boundaries • Presence •
+        Safety •
+      </div>
+    </div>
+
+    <section class="section-padding" id="team">
+      <div class="container reveal-group">
+        <h2 style="text-align: center;">The Team</h2>
+        <div class="team-carousel">
+          <div class="member-card">
+            <div class="member-placeholder"></div>
+            <div class="member-info">
+              <h4 style="color: #fff;">Vision</h4>
+              <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--c-accent);">Founder</span>
+            </div>
+          </div>
+          <div class="member-card">
+            <div class="member-placeholder"></div>
+            <div class="member-info">
+              <h4 style="color: #fff;">Product</h4>
+              <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--c-accent);">Head of Product</span>
+            </div>
+          </div>
+          <div class="member-card">
+            <div class="member-placeholder"></div>
+            <div class="member-info">
+              <h4 style="color: #fff;">Engineering</h4>
+              <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--c-accent);">CTO</span>
+            </div>
+          </div>
+          <div class="member-card">
+            <div class="member-placeholder"></div>
+            <div class="member-info">
+              <h4 style="color: #fff;">Growth</h4>
+              <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--c-accent);">Marketing</span>
+            </div>
+          </div>
+          <div class="member-card">
+            <div class="member-placeholder"></div>
+            <div class="member-info">
+              <h4 style="color: #fff;">Design</h4>
+              <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--c-accent);">Lead Creative</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding" id="join" style="position: relative;">
+      <div
+        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 300px; height: 300px; background: var(--c-accent); filter: blur(150px); opacity: 0.2;">
+      </div>
+
+      <div class="container reveal-group" style="text-align: center;">
+        <h2 style="font-size: 3rem;">Ready to Respect Time?</h2>
+        <p style="margin-bottom: 3rem;">We are opening gradually to ensure quality.</p>
+
+        <form class="waitlist-form"
+          onsubmit="event.preventDefault(); this.innerHTML='<h3 style=\'color:#E53935\'>You are on the list.</h3>'">
+          <div class="input-row">
+            <input type="text" class="form-input" placeholder="Name" required>
+          </div>
+          <div class="input-row">
+            <input type="email" class="form-input" placeholder="Email Address" required>
+          </div>
+          <button type="submit" class="btn-xl" style="width: 100%; justify-content: center;">Request Access</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p style="font-size: 0.85rem; opacity: 0.4;">&copy; 2026 Companio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
